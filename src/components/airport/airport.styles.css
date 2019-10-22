@@ -1,3 +1,9 @@
+.menu-page{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 0px;
+}
+
 .menu-item{
     min-width: 20%;
     height:220px;
@@ -27,5 +33,5 @@
     color:#fff;
     font-size: 60px;
     font-weight: 900;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }

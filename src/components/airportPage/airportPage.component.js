@@ -9,7 +9,7 @@ const airportPage = (props)=>{
         <div className='detail-page'>
             <img className='detail-background' src={require(`../images/${props.airport.id}.jpg`)} />  
             <div className='detail-content'>
-                <p className='close-page'>X</p>
+                <p className='close-page' onClick={()=> props.history.push('/')} >X</p>
                 <h1 className='port-id'>{props.airport.id.toUpperCase()}</h1>
                 <h2 className='port-name'>{props.airport.name.toUpperCase()}</h2>
                 <h3 className='port-city'>{props.airport.city.toUpperCase()}, {props.airport.country.toUpperCase()}</h3>
