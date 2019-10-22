@@ -1,23 +1,29 @@
 import React from 'react';
 import './mainpage.styles.css';
-import {airport} from '../../data';
+import { connect } from 'react-redux'
 
 import Airport from '../airport/airport.component';
 
 class MainPage extends React.Component{
-    state={
-        airports : airport
-    }
+    // state={
+    //     airports : airportData
+    // }
 
     render(){
-        console.log(this.state.airport)
+        console.log(this.props)
         return(
             <div className='main-page'>
-                {this.state.airports.map((airport)=>(
+                {this.props.airports.map((airport)=>(
                     <Airport key={airport.id} airport={airport} />
                 ))}
            </div>
         )
     }
 }
-export default MainPage;
+const mapStateToProps = (state)=>{
+    return{
+        airports: state
+    }
+}
+
+export default connect(mapStateToProps)(MainPage);
