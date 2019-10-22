@@ -1,0 +1,31 @@
+.menu-item{
+    min-width: 20%;
+    height:220px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+}
+.background:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.background{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.6;
+}
+.content{
+    position: absolute;
+    z-index: 10;
+}
+.title{
+    color:#fff;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
