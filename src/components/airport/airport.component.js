@@ -5,7 +5,7 @@ import {Link } from 'react-router-dom';
 
 const Airport = (props)=>{
     return(
-        <Link>
+        <Link to={'/'+props.airport.id}>
             <div className='menu-item'>
                 <img className='background' src={require(`../images/${props.airport.id}.jpg`)} /> 
                 <div className='content'>
