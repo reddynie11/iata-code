@@ -22,8 +22,9 @@ import airportPage from './components/airportPage/airportPage.component';
 function App() {
   return (
     <div className="App">
-      <Header />
+    
       <Switch>
+        {/* <Route path='/' component={Header} /> */}
         <Route exact path='/' component={MainPage} />
         <Route path='/:id' component={airportPage } />
       </Switch>

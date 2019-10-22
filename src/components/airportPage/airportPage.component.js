@@ -1,16 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import './airportDetail.styles.css';
+
 const airportPage = (props)=>{
     console.log(props)
     return(
         <div className='detail-page'>
             <img className='detail-background' src={require(`../images/${props.airport.id}.jpg`)} />  
-            <div className='deatil-content'>
+            <div className='detail-content'>
+                <p className='close-page'>X</p>
                 <h1 className='port-id'>{props.airport.id.toUpperCase()}</h1>
                 <h2 className='port-name'>{props.airport.name.toUpperCase()}</h2>
-                <h3>{props.airport.city.toUpperCase()}, {props.airport.country.toUpperCase()}</h3>
-                <p>{props.airport.description}</p>
+                <h3 className='port-city'>{props.airport.city.toUpperCase()}, {props.airport.country.toUpperCase()}</h3>
+                <p className='detail-desc'>{props.airport.description}</p>
             </div>         
         </div>
     )
